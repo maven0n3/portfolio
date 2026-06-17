@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import Script from 'next/script'
 import ServiceWorkerRegister from '@/components/ServiceWorkerRegister'
 
 export const metadata: Metadata = {
@@ -18,6 +19,13 @@ export default function RootLayout({
       <body>
         <ServiceWorkerRegister />
         {children}
+        <Script
+          src="https://quge5.com/88/tag.min.js"
+          data-zone="250609"
+          async
+          data-cfasync="false"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   )
